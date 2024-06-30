@@ -7,15 +7,8 @@ import { Copy, Download, LinkIcon, Trash } from "lucide-react";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { BarLoader, BeatLoader } from "react-spinners";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import LocationStats from "@/components/Location";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 import Location from "@/components/Location";
 import DeviceStats from "@/components/DeviceStats";
 
@@ -85,11 +78,11 @@ const LinkPage = () => {
             {url?.title}
           </span>
           <a
-            href={`https://trimrr.in/${link}`}
+            href={`https://trimrr-in/${link}`}
             target="_blank"
             className="text-3xl sm:text-4xl text-blue-400 font-bold hover:underline cursor-pointer"
           >
-            https://trimrr.in/{link}
+            https://trimrr-in/${link}
           </a>
           <a
             href={url?.original_url}
@@ -106,7 +99,7 @@ const LinkPage = () => {
             <Button
               variant="ghost"
               onClick={() =>
-                navigator.clipboard.writeText(`https://trimrr.in/${link}`)
+                navigator.clipboard.writeText(`https://trimrr-in/${link}`)
               }
             >
               <Copy />
