@@ -31,6 +31,7 @@ const LinkPage = () => {
     // Remove the anchor from the document
     document.body.removeChild(anchor);
   };
+
   const navigate = useNavigate();
   const { user } = UrlState();
   const { id } = useParams();
